@@ -13,7 +13,7 @@ def list_division(my_list_1, my_list_2, list_length):
                 raise TypeError("wrong type")
 
             # Perform division
-             if num2 == 0:
+            if num2 == 0:
                 raise ZeroDivisionError("division by 0")
 
             result.append(num1 / num2)
@@ -31,4 +31,4 @@ def list_division(my_list_1, my_list_2, list_length):
             result.append(0)
         finally:                                                                                                                                                 pass
 
-        return result
+    return result
