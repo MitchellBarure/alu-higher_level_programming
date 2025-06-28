@@ -19,7 +19,8 @@ def list_division(my_list_1, my_list_2, list_length):
             print(e)
             result.append(0)
         except ZeroDivisionError as e:
-            print(e)                                                    
+            print(e)
             result.append(0)
-        finally:                                                                                                                                                 continue
+        finally:                                                    
+            continue
     return result
