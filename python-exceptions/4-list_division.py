@@ -6,13 +6,11 @@ def list_division(my_list_1, my_list_2, list_length):
             num1 = my_list_1[i]
             num2 = my_list_2[i]
 
-            # Check types
             if not isinstance(num1, (int, float)):
                 raise TypeError("wrong type")
             if not isinstance(num2, (int, float)):
                 raise TypeError("wrong type")
 
-            # Perform division
             if num2 == 0:
                 raise ZeroDivisionError("division by 0")
 
@@ -29,6 +27,6 @@ def list_division(my_list_1, my_list_2, list_length):
         except ZeroDivisionError as e:
             print(e)                                                    
             result.append(0)
-        finally:                                                                                                                                                 pass
 
+        finally:                                                                                                                                                 continue
     return result
