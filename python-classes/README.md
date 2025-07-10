@@ -1,0 +1,1 @@
+This project is centered around OOP, Object-Oriented Programming. The tasks will allow me to understand the concept of classes, objects, instances, attributes, self, methods, Data Abstraction, Data Encapsulation, Information Hiding, propertie
