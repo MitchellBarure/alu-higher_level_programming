@@ -87,7 +87,8 @@ class Rectangle:
     def __str__(self):
         """
         Returns a string representation of the rectangle.
-        The rectangle is represented with the character(s) stored                 in print_symbol.
+        The rectangle is represented with the character(s) stored\
+                in print_symbol.
         If width or height is equal to 0, returns an empty string.
         """
         if self.__width == 0 or self.__height == 0:
@@ -101,7 +102,8 @@ class Rectangle:
 
     def __repr__(self):
         """
-        Returns a string representation of the rectangle to be able                 to recreate a new instance by using eval().
+        Returns a string representation of the rectangle to be able\
+                to recreate a new instance by using eval().
         """
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
@@ -116,14 +118,16 @@ class Rectangle:
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """
-        Static method to compare two Rectangle instances based                 on their area.
+        Static method to compare two Rectangle instances based\
+                on their area.
         Args:
             rect_1 (Rectangle): The first rectangle instance.
             rect_2 (Rectangle): The second rectangle instance.
         Returns:
             Rectangle: The rectangle instance with the larger area.
         Raises:
-            TypeError: If either rect_1 or rect_2 is not an instance                     of Rectangle.
+            TypeError: If either rect_1 or rect_2 is not an instance\
+                    of Rectangle.
         """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
@@ -138,10 +142,12 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """
-        Class method that returns a new Rectangle instance where                 width == height == size.
+        Class method that returns a new Rectangle instance where\
+                width == height == size.
         Args:
             size (int): The size of the square (both width and height).
         Returns:
-            Rectangle: A new instance of Rectangle with equal width                     and height.
+            Rectangle: A new instance of Rectangle with equal width\
+                    and height.
         """
         return cls(size, size)

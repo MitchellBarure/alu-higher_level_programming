@@ -87,7 +87,8 @@ class Rectangle:
     def __str__(self):
         """
         Returns a string representation of the rectangle.
-        The rectangle is represented with the character(s) stored                 in print_symbol.
+        The rectangle is represented with the character(s) stored\
+                in print_symbol.
         If width or height is equal to 0, returns an empty string.
         """
         if self.__width == 0 or self.__height == 0:
@@ -101,7 +102,8 @@ class Rectangle:
 
     def __repr__(self):
         """
-        Returns a string representation of the rectangle to be able to                 recreate
+        Returns a string representation of the rectangle to be able to\
+                recreate
         a new instance by using eval().
         """
         return "Rectangle({}, {})".format(self.__width, self.__height)
@@ -124,7 +126,8 @@ class Rectangle:
         Returns:
             Rectangle: The rectangle instance with the larger area.
         Raises:
-            TypeError: If either rect_1 or rect_2 is not an instance of                     Rectangle.
+            TypeError: If either rect_1 or rect_2 is not an instance of\
+                    Rectangle.
         """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
