@@ -1,3 +1,108 @@
-[TypeError] name must be an integer
-[ValueError] age must be greater than 0
-[ValueError] distance must be greater than 0
+===============================
+ Testing module 7-base_geometry.py
+===============================
+
+area(self) raise a Exception
+integer_validator(self, name, value) validates the input value
+
+Initial
+=======
+
+First, Import module and function
+
+        >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Use:
+
+1-my_list.txt >>> bg = BaseGeometry()
+
+validate functions
+
+1-my_list.txt >>> 'area' in dir(BaseGeometry)
+1-my_list.txt True
+
+1-my_list.txt >>> 'integer_validator' in dir(BaseGeometry)
+1-my_list.txt True
+
+Validate instance
+
+1-my_list.txt  >>> dir(bg) == dir(BaseGeometry)
+    1-my_list.txt  True
+
+Validate area function
+
+1-my_list.txt  >>> bg.area()
+1-my_list.txt  Traceback (most recent call last):
+  1-my_list.txt  ...
+1-my_list.txt  Exception: area() is not implemented
+
+Validate integer_validator
+
+1-my_list.txt  >>> bg.integer_validator("name", -10)
+1-my_list.txt  Traceback (most recent call last):
+  1-my_list.txt  ...
+1-my_list.txt  ValueError: name must be greater than 0
+
+1-my_list.txt  >>> bg.integer_validator("name", 0)
+1-my_list.txt  Traceback (most recent call last):
+1-my_list.txt  ...
+1-my_list.txt  ValueError: name must be greater than 0
+
+1-my_list.txt  >>> bg.integer_validator("name", 4)
+
+1-my_list.txt  >>> bg.integer_validator("name", "last")
+1-my_list.txt  Traceback (most recent call last):
+  1-my_list.txt  ...
+1-my_list.txt  TypeError: name must be an integer
+
+Boolean type
+
+1-my_list.txt  >>> bg.integer_validator("name", True)
+    1-my_list.txt  Traceback (most recent call last):
+    1-my_list.txt  ...
+    1-my_list.txt  TypeError: name must be an integer
+
+List type
+
+1-my_list.txt  >>> bg.integer_validator("Test", [3])
+    1-my_list.txt  Traceback (most recent call last):
+    1-my_list.txt  ...
+    1-my_list.txt  TypeError: Test must be an integer
+
+Tuple type
+
+         >>> bg.integer_validator("Test", (4, ))
+    1-my_list.txt  Traceback (most recent call last):
+    1-my_list.txt  ...
+    1-my_list.txt  TypeError: Test must be an integer
+
+Set type
+
+1-my_list.txt  >>> bg.integer_validator("Test", {3, 4})
+    1-my_list.txt  Traceback (most recent call last):
+    1-my_list.txt  ...
+    1-my_list.txt  TypeError: Test must be an integer
+
+Dict type
+
+         >>> bg.integer_validator("Test", {1: 2})
+    1-my_list.txt  Traceback (most recent call last):
+    1-my_list.txt  ...
+    1-my_list.txt  TypeError: Test must be an integer
+
+with None
+
+         >>> bg.integer_validator("Test", None)
+    1-my_list.txt  Traceback (most recent call last):
+    1-my_list.txt  ...
+    1-my_list.txt  TypeError: Test must be an integer
+
+1-my_list.txt  >>> bg.integer_validator()
+1-my_list.txt  Traceback (most recent call last):
+1-my_list.txt  ...
+1-my_list.txt  TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+1-my_list.txt  >>> bg.integer_validator(1)
+1-my_list.txt  Traceback (most recent call last):
+ 1-my_list.txt  ...
+1-my_list.txt  TypeError: integer_validator() missing 1 required positional argument: 'value'
