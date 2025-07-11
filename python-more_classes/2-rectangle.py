@@ -45,7 +45,7 @@ class Rectangle:
     @property
     def height(self):
         """
-        Retrieves the height of the rectangle
+        Retrieves the height of the rectangle.
         """
         return self.__height
 
@@ -56,16 +56,22 @@ class Rectangle:
         Args:
             value (int): The height value to set.
         Raises:
-            TypeError:
-            ValueError:
+            TypeError: If height is not an integer.
+            ValueError: If height is less than 0.
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-        
+
     def area(self):
+        """
+        Returns the area of the rectangle.
+        """
+        return self.__width * self.__height
+
+    def perimeter(self):
         """
         Returns the perimeter of the rectangle.
         If width or height is 0, the perimeter is 0.
@@ -73,4 +79,3 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
-
