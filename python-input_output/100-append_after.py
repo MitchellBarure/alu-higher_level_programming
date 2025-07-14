@@ -1,12 +1,14 @@
 #!/usr/bin/python3
 """
-Inserts a line of text into a file after each line containing a specific string.
+Inserts a line of text into a file after each line containing \
+        a specific string.
 """
 
 
 def append_after(filename="", search_string="", new_string=""):
     """
-    Reads a file, inserts new_string after lines with search_string, then overwrites the file.
+    Reads a file, inserts new_string after lines with search_string, \
+            then overwrites the file.
     """
     # Read all lines from the file
     with open(filename, 'r', encoding='utf-8') as f:

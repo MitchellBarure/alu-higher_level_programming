@@ -2,7 +2,8 @@
 """
 Module: pascal_triangle
 
-This module provides a function to generate Pascal's triangle up to         the nth row.
+This module provides a function to generate Pascal's triangle up to \
+        the nth row.
 """
 
 

@@ -38,4 +38,8 @@ try:
             print_statistics(total_file_size, status_codes_count)
 
 except KeyboardInterrupt:
+    pass # KeyboardInterrupt will be handled by the finally block
+
+finally:
+    # Always print final statistics when input ends or an exception occurs
     print_statistics(total_file_size, status_codes_count)
