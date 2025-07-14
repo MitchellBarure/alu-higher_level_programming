@@ -38,7 +38,8 @@ class Student:
                                     If None, all attributes are retrieved.
 
         Returns:
-            dict: A dictionary containing the attributes of the Student                     instance.
+            dict: A dictionary containing the attributes of the Student \
+                    instance.
         """
         if attrs is None:
             return self.__dict__
@@ -51,8 +52,10 @@ class Student:
         Replaces all attributes of the Student instance from a JSON dictionary.
 
         Parameters:
-            json (dict): A dictionary containing attribute names and values                     to reload.
-                         Each key is a public attribute name, and each value                                 is the attribute value.
+            json (dict): A dictionary containing attribute names and values \
+                    to reload.
+                         Each key is a public attribute name, and each value \
+                                 is the attribute value.
         """
         for key, value in json.items():
             setattr(self, key, value)

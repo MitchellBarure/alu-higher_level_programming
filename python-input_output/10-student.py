@@ -37,7 +37,8 @@ class Student:
                                     If None, all attributes are retrieved.
 
         Returns:
-            dict: A dictionary containing the attributes of the Student                     instance.
+            dict: A dictionary containing the attributes of the Student \
+                    instance.
         """
         if attrs is None:
             return self.__dict__
