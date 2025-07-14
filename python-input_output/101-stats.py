@@ -26,7 +26,8 @@ try:
 
         # Ensure there are enough parts before attempting to access
         if len(parts) < 2:
-            continue  # Skip lines that don't even have a status code and file size
+            continue  # Skip lines that don't even have a status code and \
+                    file size
 
         try:
             # Extract status code and file size from the end of the list
@@ -37,12 +38,14 @@ try:
             file_size = int(file_size_str)
 
         except (ValueError, IndexError):
-            continue  # Skip lines if status_code or file_size cannot be converted to int
+            continue  # Skip lines if status_code or file_size cannot be \
+                    converted to int
 
         total_file_size += file_size
 
         if status_code in possible_status_codes:
-            status_codes_count[status_code] = status_codes_count.get(status_code, 0) + 1
+            status_codes_count[status_code] = status_codes_count.get \
+                    (status_code, 0) + 1
 
         if line_count % 10 == 0:
             print_statistics(total_file_size, status_codes_count)
